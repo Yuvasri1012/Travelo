@@ -1436,3 +1436,22 @@ section { padding: 70px 60px; }
 #scrollToTop:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 991px) {
+  #scrollToTop {
+    width: 44px;
+    height: 44px;
+    bottom: 24px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  #scrollToTop {
+    width: 40px;
+    height: 40px;
+    bottom: 16px;
+    right: 14px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  }
+}
