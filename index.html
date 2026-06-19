@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelo - Travel Website</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Scroll to Top Button -->
+
+    <button id="scrollToTop" onclick="scrollToTop()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+        <path
+          d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z"
+        />
+        <path
+          d="M12 4.828l-4.95 4.95-1.414-1.414L12 2l6.364 6.364-1.414 1.414z"
+        />
+      </svg>
+    </button>
+
+    <!--  NAVBAR  -->
+
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#" class="logo">
+          <img
+            src="assets/logo/logoimg.png"
+            alt="Travelo Logo"
+            class="logo-img"
+          />
+        </a>
+        <div class="divider"></div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Destination</a></li>
+          <li>
+            <a href="#">Pages <i class="fa-solid fa-angle-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Blog <i class="fa-solid fa-angle-down"></i></a>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <div class="phone">
+          <i class="fa-solid fa-phone"></i>
+          <span>10(256)-928 256</span>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-airbnb"></i></a>
+        </div>
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-phone">
+          <i class="fa-solid fa-phone"></i>
+          <span>10(256)-928 256</span>
+        </div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Destination</a>
+        <a href="#">Pages</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer -->
+
+    <div class="navbar__mobile-menu" id="mobileMenu">
+      <button class="navbar__mobile-close" id="mobileClose">&times;</button>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Destination</a>
+      <a href="#">Pages</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+    <!--  HERO  -->
+
+    <section class="hero">
+      <div class="hero__bg">
+        <img
+          src="assets/banner/banner 1.png"
+          alt="Switzerland Hero Background"
+          class="hero__bg-img active"
+          data-title="Switzerland"
+        />
+        <img
+          src="assets/banner/banner 2.png"
+          alt="Indonesia Hero Background"
+          class="hero__bg-img"
+          data-title="Indonesia"
+        />
+        <img
+          src="assets/banner/banner 3.png"
+          alt="Australia Hero Background"
+          class="hero__bg-img"
+          data-title="Australia"
+        />
+      </div>
+      <div class="hero__overlay"></div>
+      <button class="hero__arrow left">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="hero__content">
+        <h1 class="hero__title">Switzerland</h1>
+        <p class="hero__desc">Pixel perfect design with awesome contents</p>
+        <a href="#" class="btn-primary">Explore Now</a>
+      </div>
+      <button class="hero__arrow right">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
+
+    <!--  SEARCH BAR  -->
+
+    <div class="search-bar">
+      <div class="search-bar__inner">
+        <div class="search-bar__label">Where you want to go?</div>
+        <div class="search-bar__field">
+          <input type="text" placeholder="Where to go?" />
+        </div>
+        <div class="search-bar__field">
+          <input type="date" placeholder="dd-mm-yyyy" />
+        </div>
+        <div class="search-bar__field">
+          <select>
+            <option>Travel type</option>
+            <option>Some option</option>
+            <option>Another option</option>
+          </select>
+        </div>
+        <div class="search-bar__btn">
+          <button>Search</button>
+        </div>
+      </div>
+    </div>
+
+    <!--  POPULAR DESTINATIONS  -->
+
+    <section class="destinations">
+      <div class="section-label">
+        <h2>Popular Destination</h2>
+        <p>
+          Suffered alteration in some form, by injected humour or good day
+          randomised booth anim 8-bit hella wolf moon beard words.
+        </p>
+      </div>
+      <div class="destinations__grid">
+        <div class="dest-card">
+          <img src="assets/popular destination/Italy.png" alt="Italy" />
+          <div class="dest-card__info">
+            <span class="dest-name">Italy</span>
+            <span class="dest-badge">07 Places</span>
+          </div>
+        </div>
+        <div class="dest-card">
+          <img src="assets/popular destination/Brazil.png" alt="Brazil" />
+          <div class="dest-card__info">
+            <span class="dest-name">Brazil</span>
+            <span class="dest-badge">03 Places</span>
+          </div>
+        </div>
+        <div class="dest-card">
+          <img src="assets/popular destination/America.png" alt="America" />
+          <div class="dest-card__info">
+            <span class="dest-name">America</span>
+            <span class="dest-badge">10 Places</span>
+          </div>
+        </div>
+        <div class="dest-card">
+          <img src="assets/popular destination/Nepal.png" alt="Nepal" />
+          <div class="dest-card__info">
+            <span class="dest-name">Nepal</span>
+            <span class="dest-badge">05 Places</span>
+          </div>
+        </div>
+        <div class="dest-card">
+          <img src="assets/popular destination/Maldives.png" alt="Maldives" />
+          <div class="dest-card__info">
+            <span class="dest-name">Maldives</span>
+            <span class="dest-badge">15 Places</span>
+          </div>
+        </div>
+        <div class="dest-card">
+          <img src="assets/popular destination/Indonesia.png" alt="Indonesia" />
+          <div class="dest-card__info">
+            <span class="dest-name">Indonesia</span>
+            <span class="dest-badge">08 Places</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  NEWSLETTER  -->
+
+    <div class="newsletter">
+      <div class="newsletter__inner">
+        <div class="newsletter__text">
+          <h3>Subscribe Our Newsletter</h3>
+          <p>
+            Subscribe newsletter to get offers and about new places to discover.
+          </p>
+        </div>
+        <div class="newsletter__form">
+          <input type="email" placeholder="Your mail" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <!--  POPULAR PLACES -->
+
+    <section class="places">
+      <div class="section-label">
+        <h2>Popular Places</h2>
+        <p>
+          Suffered alteration in some form, by injected humour or good day
+          randomised booth anim 8-bit hella wolf moon beard words.
+        </p>
+      </div>
+      <div class="places__grid">
+        <div class="place-card">
+          <div class="place-card__img">
+            <img src="assets/popular places/California.png" alt="California" />
+            <span class="place-card__price">$500</span>
+          </div>
+          <div class="place-card__body">
+            <div class="place-card__name">California</div>
+            <div class="place-card__location">United State of America</div>
+            <div class="place-card__meta">
+              <div class="stars">★★★★★ <span>(20 Review)</span></div>
+              <div class="place-card__days">
+                <i class="far fa-clock"></i> 5 Days
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="place-card">
+          <div class="place-card__img">
+            <img
+              src="assets/popular places/Korola Megna.png"
+              alt="Korola Megna"
+            />
+            <span class="place-card__price">$500</span>
+          </div>
+          <div class="place-card__body">
+            <div class="place-card__name">Korola Megna</div>
+            <div class="place-card__location">United State of America</div>
+            <div class="place-card__meta">
+              <div class="stars">★★★★★ <span>(20 Review)</span></div>
+              <div class="place-card__days">
+                <i class="far fa-clock"></i> 5 Days
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="place-card">
+          <div class="place-card__img">
+            <img src="assets/popular places/London.png" alt="London" />
+            <span class="place-card__price">$500</span>
+          </div>
+          <div class="place-card__body">
+            <div class="place-card__name">London</div>
+            <div class="place-card__location">United State of America</div>
+            <div class="place-card__meta">
+              <div class="stars">★★★★★ <span>(20 Review)</span></div>
+              <div class="place-card__days">
+                <i class="far fa-clock"></i> 5 Days
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="place-card">
+          <div class="place-card__img">
+            <img
+              src="assets/popular places/Miami Beach.png"
+              alt="Miami Beach"
+            />
+            <span class="place-card__price">$500</span>
+          </div>
+          <div class="place-card__body">
+            <div class="place-card__name">Miami Beach</div>
+            <div class="place-card__location">United State of America</div>
+            <div class="place-card__meta">
+              <div class="stars">★★★★★ <span>(20 Review)</span></div>
+              <div class="place-card__days">
+                <i class="far fa-clock"></i> 2 Days
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="place-card">
+          <div class="place-card__img">
+            <img src="assets/popular places/California1.png" alt="California" />
+            <span class="place-card__price">$500</span>
+          </div>
+          <div class="place-card__body">
+            <div class="place-card__name">California</div>
+            <div class="place-card__location">United State of America</div>
+            <div class="place-card__meta">
+              <div class="stars">★★★★★ <span>(20 Review)</span></div>
+              <div class="place-card__days">
+                <i class="far fa-clock"></i> 2 Days
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="place-card">
+          <div class="place-card__img">
+            <img
+              src="assets/popular places/Saintmartine Iceland.png"
+              alt="Saintmartine Iceland"
+            />
+            <span class="place-card__price">$500</span>
+          </div>
+          <div class="place-card__body">
+            <div class="place-card__name">Saintmartine Iceland</div>
+            <div class="place-card__location">United State of America</div>
+            <div class="place-card__meta">
+              <div class="stars">★★★★★ <span>(20 Review)</span></div>
+              <div class="place-card__days">
+                <i class="far fa-clock"></i> 3 Days
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="places__more">
+        <button class="btn-outline">More Places</button>
+      </div>
+    </section>
+
+    <!--  VIDEO SECTION  -->
+
+    <section class="video-section">
+      <div class="video-section__bg">
+        <img
+          src="assets/video/video.png"
+          alt="Enjoy video background - scenic misty mountains"
+        />
+      </div>
+      <div class="video-section__overlay"></div>
+      <div class="video-section__content">
+        <h2 class="video-section__title">Enjoy Video</h2>
+        <a
+          href="https://www.youtube.com/watch?v=f59dDEk57i0"
+          target="_blank"
+          class="play-btn"
+        >
+          <i class="fas fa-play"></i>
+        </a>
+      </div>
+    </section>
+
+    <!--  FEATURES  -->
+
+    <section class="features">
+      <div class="features__grid">
+        <div class="feature-item">
+          <div class="feature-item__icon">
+            <img src="assets/features/journey.svg" alt="Comfortable Journey" />
+          </div>
+          <h3>Comfortable Journey</h3>
+          <p>
+            A wonderful serenity has taken to the possession of my entire soul.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">
+            <img src="assets/features/hotel.svg" alt="Luxuries Hotel" />
+          </div>
+          <h3>Luxuries Hotel</h3>
+          <p>
+            A wonderful serenity has taken to the possession of my entire soul.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">
+            <img src="assets/features/guide.svg" alt="Travel Guide" />
+          </div>
+          <h3>Travel Guide</h3>
+          <p>
+            A wonderful serenity has taken to the possession of my entire soul.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--  REVIEW  -->
+    <section class="review">
+      <div class="review__wrapper">
+        <div class="review__avatar-wrap">
+          <img
+            src="assets/review/mariaimg.png"
+            alt="Reviewer"
+            class="review__avatar"
+          />
+          <div class="review__quote-icon">&#8220;</div>
+        </div>
+        <p class="review__text">
+          "Working in conjunction with humanitarian aid agencies, we have
+          supported programmes to help alleviate human suffering."
+        </p>
+        <div class="review__name" id="reviewName">- Micky Mouse</div>
+        <div class="review__dots">
+          <div class="dot active" onclick="goToReview(0)"></div>
+          <div class="dot" onclick="goToReview(1)"></div>
+          <div class="dot" onclick="goToReview(2)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--  RECENT TRIPS  -->
+
+    <section class="recent-trips">
+      <div class="section-label">
+        <h2>Recent Trips</h2>
+      </div>
+      <div class="trips__grid">
+        <div class="trip-card">
+          <div class="trip-card__img">
+            <img
+              src="assets/recent trips/trip 1.png"
+              alt="Recent trip blog post - temple landscape"
+            />
+          </div>
+          <div class="trip-card__body">
+            <div class="trip-card__date">May 5, 2020</div>
+            <div class="trip-card__title">
+              Journeys Are Best Measured In New Friends
+            </div>
+          </div>
+        </div>
+        <div class="trip-card">
+          <div class="trip-card__img">
+            <img
+              src="assets/recent trips/trip 2.png"
+              alt="Recent trip blog post - mountain traveler"
+            />
+          </div>
+          <div class="trip-card__body">
+            <div class="trip-card__date">May 4, 2020</div>
+            <div class="trip-card__title">
+              Journeys Are Best Measured In New Friends
+            </div>
+          </div>
+        </div>
+        <div class="trip-card">
+          <div class="trip-card__img">
+            <img
+              src="assets/recent trips/trip 3.png"
+              alt="Recent trip blog post - scenic nature"
+            />
+          </div>
+          <div class="trip-card__body">
+            <div class="trip-card__date">May 3, 2020</div>
+            <div class="trip-card__title">
+              Journeys Are Best Measured In New Friends
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  FOOTER -->
+
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="brand-name">
+            <img
+              src="assets/footer logo/footerlogo.png"
+              alt="Travelo Logo"
+              class="footer-logo"
+            />
+          </div>
+          <address>
+            5th flora, 700/D kings road, green<br />
+            lane New York-1782<br />
+            +10 367 826 2567<br />
+            contact@carpenter.com
+          </address>
+          <div class="footer__social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Gallery</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Popular Destination</h4>
+          <div class="footer__dest-grid">
+            <ul>
+              <li>Indonesia</li>
+              <li>India</li>
+              <li>Italy</li>
+              <li>Franch</li>
+            </ul>
+            <ul>
+              <li>America</li>
+              <li>Switzerland</li>
+              <li>Canada</li>
+              <li>England</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Instagram</h4>
+          <div class="footer__insta-grid">
+            <div class="insta-thumb">
+              <img src="assets/footer img/insta 1.png" alt="Instagram 1" />
+            </div>
+            <div class="insta-thumb">
+              <img src="assets/footer img/insta 2.png" alt="Instagram 2" />
+            </div>
+            <div class="insta-thumb">
+              <img src="assets/footer img/insta 3.png" alt="Instagram 3" />
+            </div>
+            <div class="insta-thumb">
+              <img src="assets/footer img/insta 4.png" alt="Instagram 4" />
+            </div>
+            <div class="insta-thumb">
+              <img src="assets/footer img/insta 5.png" alt="Instagram 5" />
+            </div>
+            <div class="insta-thumb">
+              <img src="assets/footer img/insta 6.png" alt="Instagram 6" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>
+          Copyright ©2032 All rights reserved | This template is made with ♡ by
+          <span class="footer__colorlib">Colorlib</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
