@@ -100,3 +100,9 @@ function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+document.querySelectorAll('*').forEach(el => {
+  if (el.offsetWidth > document.documentElement.clientWidth) {
+    console.log(el, el.offsetWidth, 'vs viewport', document.documentElement.clientWidth);
+  }
+});
