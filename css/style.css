@@ -812,6 +812,15 @@ section {
   .newsletter__text h3 {
     font-size: 18px;
   }
+
+  .newsletter__form {
+    flex-direction: column;   
+  }
+
+  .newsletter__form input,
+  .newsletter__form button {
+    width: 100%;             
+  }
 }
 
 /* POPULAR PLACES */
