@@ -19,7 +19,7 @@ hamburgerBtn.addEventListener("click", () => {
     current = (current + 1) % images.length;
     images[current].classList.add("active");
 
-    // title fade out -> text change -> fade in
+  
     titleEl.style.opacity = 0;
     setTimeout(() => {
       titleEl.textContent = images[current].dataset.title;
